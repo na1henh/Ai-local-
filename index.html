@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Club</title>
+  <meta name="description" content="AI Club: hands-on workshops, projects and a local AI lab for students curious about machine learning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23157a4b'/%3E%3Ccircle cx='10' cy='11' r='3' fill='white'/%3E%3Ccircle cx='22' cy='11' r='3' fill='white'/%3E%3Ccircle cx='16' cy='22' r='3' fill='white'/%3E%3Cpath d='M10 11L16 22L22 11' stroke='white' stroke-width='1.6' fill='none'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="AI Club home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><circle cx="10" cy="11" r="3"/><circle cx="22" cy="11" r="3"/><circle cx="16" cy="22" r="3"/><path d="M10 11L16 22L22 11"/></svg>
+        </span>
+        <span class="brand-name">AI Club</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Menu</span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#events">Events</a>
+        <a href="#projects">Projects</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-small" href="#join">Join the club</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> Meetings every week · All majors welcome</p>
+          <h1>Build with AI.<br><span class="accent">Understand</span> how it works.</h1>
+          <p class="lede">We're a student club that learns machine learning by doing: running open models on our own laptops, building projects together, and talking honestly about what AI can and can't do.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#join">Join the club</a>
+            <a class="btn btn-ghost" href="#events">See upcoming events</a>
+          </div>
+          <dl class="stats">
+            <div><dt>Weekly</dt><dd>meetings</dd></div>
+            <div><dt>100%</dt><dd>beginner friendly</dd></div>
+            <div><dt>Local</dt><dd>models, no cloud bill</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <svg class="network" viewBox="0 0 400 360">
+            <g class="edges">
+              <line x1="60" y1="70" x2="200" y2="60"/><line x1="60" y1="70" x2="200" y2="180"/><line x1="60" y1="70" x2="200" y2="300"/>
+              <line x1="60" y1="180" x2="200" y2="60"/><line x1="60" y1="180" x2="200" y2="180"/><line x1="60" y1="180" x2="200" y2="300"/>
+              <line x1="60" y1="290" x2="200" y2="60"/><line x1="60" y1="290" x2="200" y2="180"/><line x1="60" y1="290" x2="200" y2="300"/>
+              <line x1="200" y1="60" x2="340" y2="120"/><line x1="200" y1="180" x2="340" y2="120"/><line x1="200" y1="300" x2="340" y2="120"/>
+              <line x1="200" y1="60" x2="340" y2="240"/><line x1="200" y1="180" x2="340" y2="240"/><line x1="200" y1="300" x2="340" y2="240"/>
+            </g>
+            <g class="signals">
+              <circle r="4"><animateMotion dur="2.6s" repeatCount="indefinite" path="M60,70 L200,180 L340,120"/></circle>
+              <circle r="4"><animateMotion dur="3.1s" begin="0.8s" repeatCount="indefinite" path="M60,290 L200,60 L340,240"/></circle>
+              <circle r="4"><animateMotion dur="2.8s" begin="1.6s" repeatCount="indefinite" path="M60,180 L200,300 L340,120"/></circle>
+            </g>
+            <g class="nodes">
+              <circle cx="60" cy="70" r="14"/><circle cx="60" cy="180" r="14"/><circle cx="60" cy="290" r="14"/>
+              <circle cx="200" cy="60" r="16"/><circle cx="200" cy="180" r="16"/><circle cx="200" cy="300" r="16"/>
+              <circle class="out" cx="340" cy="120" r="18"/><circle class="out" cx="340" cy="240" r="18"/>
+            </g>
+          </svg>
+          <div class="chip chip-a">tokens/sec: 42</div>
+          <div class="chip chip-b">model: running locally</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container two-col">
+        <div>
+          <p class="section-label">About us</p>
+          <h2>A place to learn AI by making things</h2>
+        </div>
+        <div class="prose">
+          <p>AI Club is for anyone who's curious about artificial intelligence, whether you've trained a model before or have never written a line of code. Every meeting has something you can follow along with on your own laptop.</p>
+          <p>We focus on <strong>local AI</strong>: open models that run on your own hardware. You'll understand what's actually happening under the hood, you keep your data private, and you never pay for an API key.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <section class="section section-tint" id="programs">
+      <div class="container">
+        <p class="section-label">What we do</p>
+        <h2>Four ways to get involved</h2>
+        <div class="card-grid">
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 5h16v11H4z"/><path d="M8 20h8M12 16v4"/></svg>
+            </div>
+            <h3>Hands-on workshops</h3>
+            <p>Step-by-step sessions: run your first model, write prompts that work, build a chatbot, fine-tune a small model.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg>
+            </div>
+            <h3>Project teams</h3>
+            <p>Small groups build something real over a semester, then present it at our end-of-term demo day.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+            </div>
+            <h3>Paper &amp; news discussions</h3>
+            <p>We read one paper or story together and talk it through in plain language. No math background needed.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>AI ethics &amp; safety</h3>
+            <p>Bias, privacy, security and misinformation. We look at how AI systems fail and how to build them responsibly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section class="section" id="events">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">Upcoming</p>
+            <h2>Events</h2>
+          </div>
+          <p class="muted">Times and rooms below are examples. Update them in <code>index.html</code>.</p>
+        </div>
+
+        <!-- EDIT ME: replace these with your real events -->
+        <ol class="event-list">
+          <li class="event reveal">
+            <div class="event-date"><span class="month">Nov</span><span class="day">05</span></div>
+            <div class="event-body">
+              <span class="tag">Workshop</span>
+              <h3>Run your first local model</h3>
+              <p>Install Ollama, download a small open model and chat with it entirely offline. Bring a laptop.</p>
+            </div>
+            <div class="event-meta">6:00 PM · Room TBD</div>
+          </li>
+          <li class="event reveal">
+            <div class="event-date"><span class="month">Nov</span><span class="day">12</span></div>
+            <div class="event-body">
+              <span class="tag">Discussion</span>
+              <h3>How do language models actually work?</h3>
+              <p>Tokens, training and prediction explained with pictures instead of equations.</p>
+            </div>
+            <div class="event-meta">6:00 PM · Room TBD</div>
+          </li>
+          <li class="event reveal">
+            <div class="event-date"><span class="month">Nov</span><span class="day">19</span></div>
+            <div class="event-body">
+              <span class="tag">Build night</span>
+              <h3>Make a chatbot that knows your notes</h3>
+              <p>Connect a local model to your own documents so it can answer questions about them.</p>
+            </div>
+            <div class="event-meta">6:00 PM · Room TBD</div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section section-tint" id="projects">
+      <div class="container">
+        <p class="section-label">Project ideas</p>
+        <h2>Things members can build</h2>
+        <div class="project-grid">
+          <article class="project reveal">
+            <div class="project-top"><span class="tag">Beginner</span></div>
+            <h3>Offline study buddy</h3>
+            <p>A local chatbot that quizzes you on your class notes, with nothing sent to the cloud.</p>
+            <ul class="stack"><li>Ollama</li><li>Python</li></ul>
+          </article>
+          <article class="project reveal">
+            <div class="project-top"><span class="tag">Intermediate</span></div>
+            <h3>Image sorter</h3>
+            <p>Train a small vision model to sort photos into folders by what's in them.</p>
+            <ul class="stack"><li>PyTorch</li><li>Transfer learning</li></ul>
+          </article>
+          <article class="project reveal">
+            <div class="project-top"><span class="tag">Advanced</span></div>
+            <h3>Prompt-injection lab</h3>
+            <p>Build a deliberately vulnerable AI app, attack it, then fix it. A crossover project with cyber security.</p>
+            <ul class="stack"><li>LLM security</li><li>Red teaming</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container two-col">
+        <div>
+          <p class="section-label">FAQ</p>
+          <h2>Questions people ask</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Do I need to know how to code?</summary>
+            <p>No. Many members start with zero programming experience. Workshops come with copy-and-paste steps, and there's always someone around to help.</p>
+          </details>
+          <details>
+            <summary>What kind of laptop do I need?</summary>
+            <p>Any laptop from the last few years can run small models. More memory (16 GB or more) lets you run bigger ones, but it isn't required.</p>
+          </details>
+          <details>
+            <summary>Does it cost anything?</summary>
+            <p>No. Membership is free, and because we run models locally, there are no subscriptions or API fees.</p>
+          </details>
+          <details>
+            <summary>Can I join partway through the semester?</summary>
+            <p>Yes. Most meetings stand on their own, so you can jump in at any point.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join -->
+    <section class="join" id="join">
+      <div class="container join-inner">
+        <div>
+          <h2>Ready to start building?</h2>
+          <p>Come to any meeting, or send us an email and we'll add you to the mailing list.</p>
+        </div>
+        <!-- EDIT ME: replace with the club's real email address -->
+        <a class="btn btn-light" href="mailto:aiclub@example.edu?subject=Joining%20AI%20Club">Email us to join</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><circle cx="10" cy="11" r="3"/><circle cx="22" cy="11" r="3"/><circle cx="16" cy="22" r="3"/><path d="M10 11L16 22L22 11"/></svg>
+        </span>
+        <span class="brand-name">AI Club</span>
+      </a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#projects">Projects</a>
+        <a href="#join">Join</a>
+      </nav>
+      <p class="muted small">&copy; <span id="year"></span> AI Club. A student organization.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
