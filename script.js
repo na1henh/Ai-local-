@@ -38,6 +38,41 @@ if ("IntersectionObserver" in window) {
   revealed.forEach((el) => el.classList.add("visible"));
 }
 
+// Aura farming station
+const auraEvents = [
+  [67, "you ran a model locally. 6 7."],
+  [100, "you said \"it depends on the dataset.\" very wise."],
+  [-200, "you pasted your API key in the group chat."],
+  [300, "your loss curve actually went down."],
+  [-67, "you called it \"the AI\" out loud."],
+  [150, "you mewed through the whole lecture."],
+  [-500, "you trained on the test set. cooked."],
+  [250, "Tung Tung Tung Sahur approved your pull request."],
+  [999, "you stayed in power longer than your context window. Bibi-tier."],
+  [-120, "you fanum taxed the club pizza."],
+  [61, "you secured a coalition majority for your project idea."],
+  [-300, "your model crossed the red line."],
+];
+const auraCount = document.getElementById("aura-count");
+const auraMsg = document.getElementById("aura-msg");
+const auraTotal = auraCount.parentElement;
+let aura = 0;
+let lastAura = -1;
+
+document.getElementById("aura-btn").addEventListener("click", () => {
+  let i;
+  do { i = Math.floor(Math.random() * auraEvents.length); } while (i === lastAura);
+  lastAura = i;
+  const [delta, why] = auraEvents[i];
+  aura += delta;
+  auraCount.textContent = aura.toLocaleString();
+  auraMsg.textContent = `${delta > 0 ? "+" : ""}${delta} aura: ${why}`;
+  auraTotal.classList.toggle("down", aura < 0);
+  auraTotal.classList.remove("aura-pop");
+  void auraTotal.offsetWidth;
+  auraTotal.classList.add("aura-pop");
+});
+
 // Highlight the nav link for the section on screen
 const links = [...nav.querySelectorAll('a[href^="#"]:not(.btn)')];
 const sections = links.map((a) => document.querySelector(a.getAttribute("href"))).filter(Boolean);

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Club</title>
-  <meta name="description" content="AI Club: hands-on workshops, projects and a local AI lab for students curious about machine learning.">
+  <meta name="description" content="AI Club (Ohio chapter): hands-on workshops, unhinged projects and a local AI lab. No cap.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -14,6 +14,28 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <div class="ticker" aria-label="Breaking news">
+    <div class="ticker-track">
+      <span><b>BREAKING:</b> local llama hits 67 tokens/sec 🗣️</span>
+      <span>fanum tax now applied to all GPU memory</span>
+      <span>club treasurer caught mewing during budget meeting</span>
+      <span>Bibi's time in office has officially exceeded our model's context window</span>
+      <span>tralalero tralala has joined the Discord</span>
+      <span>new paper: Attention Is All You Need (and also aura)</span>
+      <span>Israel perfected the cherry tomato. we perfected the cherry-picked benchmark 🍅</span>
+      <span>project team coalition collapses, new elections Thursday</span>
+      <!-- second copy so the loop is seamless -->
+      <span aria-hidden="true"><b>BREAKING:</b> local llama hits 67 tokens/sec 🗣️</span>
+      <span aria-hidden="true">fanum tax now applied to all GPU memory</span>
+      <span aria-hidden="true">club treasurer caught mewing during budget meeting</span>
+      <span aria-hidden="true">Bibi's time in office has officially exceeded our model's context window</span>
+      <span aria-hidden="true">tralalero tralala has joined the Discord</span>
+      <span aria-hidden="true">new paper: Attention Is All You Need (and also aura)</span>
+      <span aria-hidden="true">Israel perfected the cherry tomato. we perfected the cherry-picked benchmark 🍅</span>
+      <span aria-hidden="true">project team coalition collapses, new elections Thursday</span>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="AI Club home">
@@ -21,6 +43,7 @@
           <svg viewBox="0 0 32 32"><circle cx="10" cy="11" r="3"/><circle cx="22" cy="11" r="3"/><circle cx="16" cy="22" r="3"/><path d="M10 11L16 22L22 11"/></svg>
         </span>
         <span class="brand-name">AI Club</span>
+        <span class="brand-badge">ohio chapter</span>
       </a>
 
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
@@ -30,12 +53,12 @@
       </button>
 
       <nav id="site-nav" class="site-nav" aria-label="Main">
-        <a href="#about">About</a>
+        <a href="#about">Lore</a>
         <a href="#programs">Programs</a>
         <a href="#events">Events</a>
-        <a href="#projects">Projects</a>
+        <a href="#mascots">Mascots</a>
         <a href="#faq">FAQ</a>
-        <a class="btn btn-small" href="#join">Join the club</a>
+        <a class="btn btn-small" href="#join">Lock in</a>
       </nav>
     </div>
   </header>
@@ -45,17 +68,17 @@
     <section class="hero" id="top">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> Meetings every week · All majors welcome</p>
-          <h1>Build with AI.<br><span class="accent">Understand</span> how it works.</h1>
-          <p class="lede">We're a student club that learns machine learning by doing: running open models on our own laptops, building projects together, and talking honestly about what AI can and can't do.</p>
+          <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> Meetings every week · no cap · all majors welcome</p>
+          <h1>Build with AI.<br><span class="accent">Mog</span> the benchmarks.</h1>
+          <p class="lede">We're a student club that learns machine learning by actually cooking: running open models on our own laptops, building unhinged projects together, and being honest about what AI can and can't do. Zero cloud bills. Maximum aura.</p>
           <div class="hero-actions">
-            <a class="btn" href="#join">Join the club</a>
-            <a class="btn btn-ghost" href="#events">See upcoming events</a>
+            <a class="btn" href="#join">Lock in (join)</a>
+            <a class="btn btn-ghost" href="#events">See the lore drops</a>
           </div>
           <dl class="stats">
-            <div><dt>Weekly</dt><dd>meetings</dd></div>
-            <div><dt>100%</dt><dd>beginner friendly</dd></div>
-            <div><dt>Local</dt><dd>models, no cloud bill</dd></div>
+            <div><dt>67</dt><dd>tokens/sec 🤷</dd></div>
+            <div><dt>100%</dt><dd>beginner friendly fr</dd></div>
+            <div><dt>0</dt><dd>skibidi toilets harmed</dd></div>
           </dl>
         </div>
 
@@ -79,8 +102,9 @@
               <circle class="out" cx="340" cy="120" r="18"/><circle class="out" cx="340" cy="240" r="18"/>
             </g>
           </svg>
-          <div class="chip chip-a">tokens/sec: 42</div>
-          <div class="chip chip-b">model: running locally</div>
+          <div class="chip chip-a">tokens/sec: 67</div>
+          <div class="chip chip-b">model: mewing locally</div>
+          <div class="chip chip-c">aura: +1000</div>
         </div>
       </div>
     </section>
@@ -89,61 +113,98 @@
     <section class="section" id="about">
       <div class="container two-col">
         <div>
-          <p class="section-label">About us</p>
-          <h2>A place to learn AI by making things</h2>
+          <p class="section-label">The lore</p>
+          <h2>A place to learn AI by cooking</h2>
         </div>
         <div class="prose">
-          <p>AI Club is for anyone who's curious about artificial intelligence, whether you've trained a model before or have never written a line of code. Every meeting has something you can follow along with on your own laptop.</p>
-          <p>We focus on <strong>local AI</strong>: open models that run on your own hardware. You'll understand what's actually happening under the hood, you keep your data private, and you never pay for an API key.</p>
+          <p>AI Club is for anyone curious about AI, whether you've trained a model before or you think "transformer" is a robot car. Every meeting has something you can follow along with on your own laptop.</p>
+          <p>We focus on <strong>local AI</strong>: open models that run on your own hardware. Your data stays on your machine, you understand what's under the hood, and you never pay the API fanum tax.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Red line -->
+    <section class="section section-tint" id="red-line">
+      <div class="container redline">
+        <figure class="bomb-card reveal">
+          <svg class="bomb" viewBox="0 0 320 325" role="img" aria-labelledby="bomb-title">
+            <title id="bomb-title">A cartoon bomb labelled AI hype, filled almost to a red line marked AGI by Tuesday</title>
+            <defs>
+              <clipPath id="bomb-body"><circle cx="150" cy="190" r="100"/></clipPath>
+            </defs>
+            <path class="fuse" d="M206 88 Q225 55 255 48"/>
+            <g class="spark"><path d="M255 48 l12 -10 M255 48 l15 2 M255 48 l4 -16 M255 48 l14 12"/></g>
+            <g clip-path="url(#bomb-body)">
+              <rect class="fill fill-1" x="40" y="225" width="220" height="70"/>
+              <rect class="fill fill-2" x="40" y="170" width="220" height="55"/>
+              <rect class="fill fill-3" x="40" y="140" width="220" height="30"/>
+            </g>
+            <line class="tick" x1="55" y1="225" x2="245" y2="225"/>
+            <line class="tick" x1="55" y1="170" x2="245" y2="170"/>
+            <circle class="shell" cx="150" cy="190" r="100"/>
+            <rect class="cap" x="184" y="84" width="32" height="22" rx="4" transform="rotate(30 200 95)"/>
+            <path class="red" d="M30 138 Q150 130 272 136"/>
+            <text class="label" x="150" y="265">"what's ChatGPT"</text>
+            <text class="label" x="150" y="202">GPT wrapper startups</text>
+            <text class="label" x="150" y="160">agents</text>
+            <text class="label label-red" x="150" y="126">AGI by Tuesday</text>
+            <text class="bomb-title" x="150" y="318">AI HYPE</text>
+          </svg>
+        </figure>
+        <div>
+          <p class="section-label">Our position</p>
+          <h2>We draw a red line.</h2>
+          <p class="prose-p">Inspired by the most iconic diagram in UN history. Once the hype crosses the red line, the club logs off and touches grass. We're currently at "agents," so it's giving <em>stage two</em>.</p>
+          <p class="prose-p muted">Diagram drawn live with a marker at our general assembly. Reviews were mixed.</p>
         </div>
       </div>
     </section>
 
     <!-- Programs -->
-    <section class="section section-tint" id="programs">
+    <section class="section" id="programs">
       <div class="container">
         <p class="section-label">What we do</p>
-        <h2>Four ways to get involved</h2>
+        <h2>Four ways to lock in</h2>
         <div class="card-grid">
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M4 5h16v11H4z"/><path d="M8 20h8M12 16v4"/></svg>
             </div>
-            <h3>Hands-on workshops</h3>
-            <p>Step-by-step sessions: run your first model, write prompts that work, build a chatbot, fine-tune a small model.</p>
+            <h3>Workshops that go hard</h3>
+            <p>Step-by-step sessions: run your first model, write prompts that actually slap, build a chatbot, fine-tune a small model. Nobody gets left in Ohio.</p>
           </article>
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg>
             </div>
-            <h3>Project teams</h3>
-            <p>Small groups build something real over a semester, then present it at our end-of-term demo day.</p>
+            <h3>Project coalitions</h3>
+            <p>Small groups build something real over a semester and demo it at the end. If your coalition collapses, we just hold another election. The Knesset does it constantly and it's fine.</p>
           </article>
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
             </div>
-            <h3>Paper &amp; news discussions</h3>
-            <p>We read one paper or story together and talk it through in plain language. No math background needed.</p>
+            <h3>Paper yap sessions</h3>
+            <p>We read one paper together and yap about it in plain language. No math background needed, just vibes and a willingness to be cooked.</p>
           </article>
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
             </div>
             <h3>AI ethics &amp; safety</h3>
-            <p>Bias, privacy, security and misinformation. We look at how AI systems fail and how to build them responsibly.</p>
+            <p>Bias, privacy, security and misinformation. How AI systems fail, and how not to build the next skibidi disaster.</p>
           </article>
         </div>
       </div>
     </section>
 
     <!-- Events -->
-    <section class="section" id="events">
+    <section class="section section-tint" id="events">
       <div class="container">
         <div class="section-head">
           <div>
             <p class="section-label">Upcoming</p>
-            <h2>Events</h2>
+            <h2>Lore drops</h2>
           </div>
           <p class="muted">Times and rooms below are examples. Update them in <code>index.html</code>.</p>
         </div>
@@ -154,84 +215,138 @@
             <div class="event-date"><span class="month">Nov</span><span class="day">05</span></div>
             <div class="event-body">
               <span class="tag">Workshop</span>
-              <h3>Run your first local model</h3>
-              <p>Install Ollama, download a small open model and chat with it entirely offline. Bring a laptop.</p>
+              <h3>Run your first local model (lock-in edition)</h3>
+              <p>Install Ollama, download a small open model and chat with it fully offline. Bring a laptop and your aura.</p>
             </div>
-            <div class="event-meta">6:00 PM · Room TBD</div>
+            <div class="event-meta">6:07 PM · Room TBD</div>
           </li>
           <li class="event reveal">
             <div class="event-date"><span class="month">Nov</span><span class="day">12</span></div>
             <div class="event-body">
-              <span class="tag">Discussion</span>
-              <h3>How do language models actually work?</h3>
-              <p>Tokens, training and prediction explained with pictures instead of equations.</p>
+              <span class="tag">Yap session</span>
+              <h3>How do language models actually work? (no cap)</h3>
+              <p>Tokens, training and prediction explained with pictures, not equations. Fanum tax applies to all snacks.</p>
             </div>
-            <div class="event-meta">6:00 PM · Room TBD</div>
+            <div class="event-meta">6:07 PM · Room TBD</div>
           </li>
           <li class="event reveal">
             <div class="event-date"><span class="month">Nov</span><span class="day">19</span></div>
             <div class="event-body">
               <span class="tag">Build night</span>
               <h3>Make a chatbot that knows your notes</h3>
-              <p>Connect a local model to your own documents so it can answer questions about them.</p>
+              <p>Hook a local model up to your own documents. Startup Nation speedrun: four unicorn pitches by 9 PM or we stay late.</p>
             </div>
-            <div class="event-meta">6:00 PM · Room TBD</div>
+            <div class="event-meta">6:07 PM · Room TBD</div>
           </li>
         </ol>
       </div>
     </section>
 
     <!-- Projects -->
-    <section class="section section-tint" id="projects">
+    <section class="section" id="projects">
       <div class="container">
         <p class="section-label">Project ideas</p>
-        <h2>Things members can build</h2>
+        <h2>Things members can cook</h2>
         <div class="project-grid">
           <article class="project reveal">
             <div class="project-top"><span class="tag">Beginner</span></div>
             <h3>Offline study buddy</h3>
-            <p>A local chatbot that quizzes you on your class notes, with nothing sent to the cloud.</p>
+            <p>A local chatbot that quizzes you on your class notes. Nothing gets sent to the cloud. Certified sigma grindset.</p>
             <ul class="stack"><li>Ollama</li><li>Python</li></ul>
           </article>
           <article class="project reveal">
             <div class="project-top"><span class="tag">Intermediate</span></div>
-            <h3>Image sorter</h3>
-            <p>Train a small vision model to sort photos into folders by what's in them.</p>
-            <ul class="stack"><li>PyTorch</li><li>Transfer learning</li></ul>
+            <h3>Rizz classifier</h3>
+            <p>Train a small model to rate pickup lines from "cooked" to "W rizz." Ethically sourced cringe only.</p>
+            <ul class="stack"><li>scikit-learn</li><li>Text classification</li></ul>
           </article>
           <article class="project reveal">
             <div class="project-top"><span class="tag">Advanced</span></div>
             <h3>Prompt-injection lab</h3>
-            <p>Build a deliberately vulnerable AI app, attack it, then fix it. A crossover project with cyber security.</p>
+            <p>Build a deliberately vulnerable AI app, attack it, then patch it. Red line: only hack things you own.</p>
             <ul class="stack"><li>LLM security</li><li>Red teaming</li></ul>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Mascots -->
+    <section class="section section-tint" id="mascots">
+      <div class="container">
+        <p class="section-label">Italian brainrot division</p>
+        <h2>Club leadership (unofficial)</h2>
+        <div class="mascot-grid">
+          <article class="mascot reveal">
+            <div class="mascot-emoji" aria-hidden="true">🦈👟</div>
+            <h3>Tralalero Tralala</h3>
+            <p class="mascot-role">Head of model deployment</p>
+            <p>Three legs, Nike shoes, zero hallucinations (allegedly).</p>
+          </article>
+          <article class="mascot reveal">
+            <div class="mascot-emoji" aria-hidden="true">🩰☕</div>
+            <h3>Ballerina Cappuccina</h3>
+            <p class="mascot-role">Frontend lead</p>
+            <p>Spins up containers. Literally just spins.</p>
+          </article>
+          <article class="mascot reveal">
+            <div class="mascot-emoji" aria-hidden="true">🪵🏏</div>
+            <h3>Tung Tung Tung Sahur</h3>
+            <p class="mascot-role">On-call engineer</p>
+            <p>Pages you at 3 AM. Knocks three times first, as a courtesy.</p>
+          </article>
+          <article class="mascot reveal">
+            <div class="mascot-emoji" aria-hidden="true">🐘🌵</div>
+            <h3>Lirili Larila</h3>
+            <p class="mascot-role">Scheduler</p>
+            <p>Controls time itself. Still can't fix our cron jobs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aura -->
+    <section class="section" id="aura">
+      <div class="container aura">
+        <div>
+          <p class="section-label">Interactive</p>
+          <h2>Aura farming station</h2>
+          <p class="prose-p">Click the button. Gain or lose aura based on real AI decisions people make every day.</p>
+        </div>
+        <div class="aura-card">
+          <p class="aura-total"><span id="aura-count">0</span> <small>aura</small></p>
+          <p class="aura-msg" id="aura-msg" aria-live="polite">No aura yet. Tragic.</p>
+          <button class="btn" id="aura-btn" type="button">Farm aura</button>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ -->
-    <section class="section" id="faq">
+    <section class="section section-tint" id="faq">
       <div class="container two-col">
         <div>
           <p class="section-label">FAQ</p>
-          <h2>Questions people ask</h2>
+          <h2>Questions people yap about</h2>
         </div>
         <div class="faq">
           <details>
             <summary>Do I need to know how to code?</summary>
-            <p>No. Many members start with zero programming experience. Workshops come with copy-and-paste steps, and there's always someone around to help.</p>
+            <p>No cap, no. Plenty of members start at zero. Workshops are copy-and-paste friendly, and someone will always help you lock in.</p>
           </details>
           <details>
             <summary>What kind of laptop do I need?</summary>
-            <p>Any laptop from the last few years can run small models. More memory (16 GB or more) lets you run bigger ones, but it isn't required.</p>
+            <p>Any laptop from the last few years can run small models. 16 GB of memory or more lets you run bigger ones. Laptops from Ohio may require additional prayer.</p>
           </details>
           <details>
             <summary>Does it cost anything?</summary>
-            <p>No. Membership is free, and because we run models locally, there are no subscriptions or API fees.</p>
+            <p>Free. We run models locally, so there are no subscriptions, no API fees and no fanum tax.</p>
           </details>
           <details>
             <summary>Can I join partway through the semester?</summary>
-            <p>Yes. Most meetings stand on their own, so you can jump in at any point.</p>
+            <p>Yes. Most meetings stand on their own. Bibi has made more comebacks than we can count, and so can you.</p>
+          </details>
+          <details>
+            <summary>Is this website serious?</summary>
+            <p>The workshops are real. The aura is real. The red line is metaphorical.</p>
           </details>
         </div>
       </div>
@@ -241,11 +356,11 @@
     <section class="join" id="join">
       <div class="container join-inner">
         <div>
-          <h2>Ready to start building?</h2>
-          <p>Come to any meeting, or send us an email and we'll add you to the mailing list.</p>
+          <h2>Ready to lock in?</h2>
+          <p>Come to any meeting, or email us and we'll add you to the mailing list. Leaving the mailing list requires a 61-seat majority.</p>
         </div>
         <!-- EDIT ME: replace with the club's real email address -->
-        <a class="btn btn-light" href="mailto:aiclub@example.edu?subject=Joining%20AI%20Club">Email us to join</a>
+        <a class="btn btn-light" href="mailto:aiclub@example.edu?subject=I%20am%20locking%20in">Email us to join</a>
       </div>
     </section>
   </main>
@@ -259,12 +374,12 @@
         <span class="brand-name">AI Club</span>
       </a>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="#about">About</a>
+        <a href="#about">Lore</a>
         <a href="#events">Events</a>
-        <a href="#projects">Projects</a>
+        <a href="#mascots">Mascots</a>
         <a href="#join">Join</a>
       </nav>
-      <p class="muted small">&copy; <span id="year"></span> AI Club. A student organization.</p>
+      <p class="muted small">&copy; <span id="year"></span> AI Club (Ohio chapter). Satire, mostly. Not affiliated with any government, coalition or toilet.</p>
     </div>
   </footer>
 
