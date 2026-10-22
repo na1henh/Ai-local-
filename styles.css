@@ -488,3 +488,211 @@ code {
   .js .bomb-card .red { stroke-dashoffset: 0; }
   .ticker { overflow-x: auto; }
 }
+
+/* =========================================================
+   Brainrot layer: everything below makes the site worse on purpose
+   ========================================================= */
+:root {
+  --font-body: "Comic Sans MS", "Comic Neue", cursive;
+  --font-head: Impact, "Anton", "Arial Black", sans-serif;
+  --neon: #39ff14;
+  --lime: #c6ff00;
+  --hard: 6px 6px 0 #000;
+}
+
+body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Ctext x='12' y='44' font-size='30' opacity='0.07'%3E%F0%9F%97%BF%3C/text%3E%3Ctext x='82' y='114' font-size='30' opacity='0.07'%3E%F0%9F%92%80%3C/text%3E%3C/svg%3E");
+}
+
+/* Deep-fried JPEG grain over the whole page */
+body::after {
+  content: ""; position: fixed; inset: 0; z-index: 9998; pointer-events: none;
+  opacity: 0.13; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+h1, h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: var(--green-600);
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 6px 6px 0 var(--neon);
+}
+h2:hover { animation: wobble 0.5s ease; }
+h3 { font-family: var(--font-body); font-weight: 700; letter-spacing: 0; }
+
+h1 .accent {
+  background: linear-gradient(90deg, var(--neon), #fff200, var(--green-600), var(--lime), var(--neon));
+  background-size: 300% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 2px #000;
+  text-shadow: none;
+  animation: rainbow 3s linear infinite;
+}
+
+@keyframes rainbow { to { background-position: 300% 0; } }
+@keyframes wobble { 25% { transform: rotate(-3deg) scale(1.03); } 50% { transform: rotate(2deg); } 75% { transform: rotate(-1deg); } }
+@keyframes shake { 0%, 100% { translate: 0; } 20% { translate: -3px 1px; } 40% { translate: 3px -1px; } 60% { translate: -2px 2px; } 80% { translate: 2px -2px; } }
+@keyframes blink { 50% { opacity: 0.25; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes bob { 50% { translate: 0 -8px; } }
+
+.section-label {
+  background: var(--neon); color: #000;
+  border: 2px solid #000; padding: 2px 10px;
+  rotate: -2deg;
+  font-family: var(--font-head); font-weight: 400; font-size: 0.95rem;
+  animation: blink 1.2s steps(2) infinite;
+}
+
+/* Buttons */
+.btn {
+  background: var(--neon); color: #000;
+  border: 3px solid #000; border-radius: 4px;
+  box-shadow: 4px 4px 0 #000;
+  font-family: var(--font-head); font-weight: 400; text-transform: uppercase; letter-spacing: 0.04em;
+}
+.btn:hover { background: var(--lime); border-color: #000; color: #000; transform: none; box-shadow: 6px 6px 0 #000; animation: shake 0.3s linear infinite; }
+.btn-ghost { background: var(--white); }
+.btn-light { background: var(--white); }
+
+/* Header, ticker, construction tape */
+.site-header { border-bottom: 3px solid #000; }
+.site-header.scrolled { border-bottom-color: #000; }
+.brand-name { font-family: var(--font-head); font-weight: 400; font-size: 1.4rem; text-transform: uppercase; }
+.brand-mark { border: 2px solid #000; animation: spin 6s linear infinite; }
+.brand-badge { background: var(--neon); color: #000; border: 2px solid #000; rotate: -6deg; font-family: var(--font-body); }
+.site-nav a:not(.btn) { font-family: var(--font-body); font-weight: 700; }
+
+.ticker { background: var(--neon); color: #000; border-bottom: 3px solid #000; font-family: var(--font-head); font-size: 1rem; letter-spacing: 0.03em; }
+.ticker b { color: #d62828; }
+.ticker-track span::after { content: "💀"; color: inherit; font-size: 0.9em; }
+
+.construction {
+  text-align: center; padding: 6px 12px;
+  background: repeating-linear-gradient(-45deg, #000 0 18px, var(--neon) 18px 36px);
+  border-bottom: 3px solid #000;
+}
+.construction span {
+  display: inline-block; padding: 2px 12px;
+  background: var(--white); border: 2px solid #000;
+  font-family: var(--font-head); font-size: 0.9rem; letter-spacing: 0.03em;
+}
+
+/* Hero */
+.eyebrow { border: 2px solid #000; box-shadow: 3px 3px 0 #000; font-family: var(--font-body); font-weight: 700; rotate: -1deg; }
+.stats dt { font-family: var(--font-head); font-weight: 400; font-size: 2rem; color: var(--green-600); text-shadow: 2px 2px 0 #000; }
+.stats div { border-left: 3px dotted #000; }
+
+.hero-art { border: 3px solid #000; box-shadow: var(--hard); rotate: 2deg; }
+.network .nodes circle { stroke: #000; }
+.network .edges line { stroke: var(--neon); stroke-width: 3; stroke-dasharray: 2 6; }
+.network .signals circle { fill: #d62828; }
+.emoji-nodes text { font-size: 36px; text-anchor: middle; dominant-baseline: central; filter: saturate(2.5) contrast(1.3); }
+
+.chip { border: 2px solid #000; box-shadow: 3px 3px 0 #000; font-family: var(--font-body); font-weight: 700; color: #000; }
+.chip-a { rotate: -6deg; background: #fff200; }
+.chip-b { rotate: 3deg; }
+.chip-c { background: var(--neon); color: #000; border-color: #000; }
+
+.sticker {
+  position: absolute;
+  display: grid; place-items: center; text-align: center;
+  font-family: var(--font-head); line-height: 1; color: #000;
+  border: 3px solid #000; border-radius: 50%;
+  box-shadow: 3px 3px 0 #000;
+}
+.sticker-a { width: 92px; height: 92px; top: -30px; left: -26px; background: #fff200; font-size: 0.95rem; rotate: -14deg; animation: bob 2s ease-in-out infinite; }
+.sticker-b { width: 64px; height: 64px; bottom: -24px; right: 30px; background: var(--neon); font-size: 1.15rem; animation: spin 4s linear infinite; }
+
+/* Cards and boxes: thick borders, hard shadows, crooked */
+.card, .project, .mascot, .event, .faq details, .bomb-card, .aura-card {
+  border: 3px solid #000;
+  box-shadow: var(--hard);
+  border-radius: 8px;
+}
+.card:hover, .project:hover, .mascot:hover, .event:hover { border-color: #000; box-shadow: 10px 10px 0 var(--neon); }
+.card:nth-child(odd), .project:nth-child(odd), .mascot:nth-child(odd) { rotate: -1.5deg; }
+.card:nth-child(even), .project:nth-child(even), .mascot:nth-child(even) { rotate: 1.2deg; }
+.event:nth-child(2) { rotate: -0.6deg; }
+.project { border-top: 10px solid var(--neon); }
+.card-icon { background: var(--neon); border: 2px solid #000; }
+.card-icon svg { stroke: #000; }
+
+.tag { background: var(--neon); color: #000; border: 2px solid #000; border-radius: 4px; font-family: var(--font-head); font-weight: 400; letter-spacing: 0.04em; }
+.stack li { border: 2px dashed #000; color: #000; }
+
+.event-date { background: var(--neon); color: #000; border: 3px solid #000; rotate: -6deg; }
+
+.faq details[open] { border-color: #000; box-shadow: 6px 6px 0 var(--neon); }
+.faq summary::after { content: "🤔"; background: var(--neon); border: 2px solid #000; font-size: 0.9rem; }
+.faq details[open] summary::after { content: "💡"; background: #fff200; }
+
+/* Red line bomb */
+.bomb-card { rotate: -2deg; cursor: pointer; }
+.bomb .bubble path { fill: var(--white); stroke: #000; stroke-width: 3; }
+.bomb .bubble text { font: 700 15px var(--font-body); fill: #000; text-anchor: middle; }
+.bomb .bomb-moai { font-size: 34px; text-anchor: middle; }
+.bomb .label { font-family: var(--font-body); }
+.bomb .bomb-title { font-family: var(--font-head); font-weight: 400; font-size: 18px; }
+.bomb .red { stroke-width: 9; }
+
+/* Mascots */
+.mascot-emoji {
+  background: var(--neon); border: 3px solid #000;
+  font-size: 2.2rem;
+  filter: saturate(3) contrast(1.4);
+}
+.mascot:hover .mascot-emoji { animation: spin 0.6s linear infinite; }
+.mascot-role { color: #d62828; font-family: var(--font-head); font-weight: 400; text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* Aura */
+.aura-card { background: var(--white); rotate: 1.5deg; }
+.aura-total { font-weight: 400; color: var(--green-600); text-shadow: 3px 3px 0 #000, 6px 6px 0 var(--neon); }
+.aura-total.down { color: #d62828; }
+
+/* Join + footer */
+.join-inner {
+  border: 3px solid #000; box-shadow: var(--hard); border-radius: 8px;
+  background: linear-gradient(120deg, var(--green-700), var(--green-500), var(--neon), var(--green-700));
+  background-size: 300% 300%;
+  animation: rainbow 6s linear infinite;
+}
+.join h2 { color: var(--white); }
+.join p { color: var(--white); text-shadow: 1px 1px 0 #000; font-weight: 700; }
+
+.site-footer { border-top: 3px solid #000; }
+.visitors { margin: 0; font-family: var(--font-body); font-weight: 700; }
+#visitor {
+  display: inline-block; margin-left: 6px; padding: 2px 8px;
+  background: #000; color: var(--neon);
+  font-family: ui-monospace, Consolas, monospace; letter-spacing: 0.2em;
+  border: 2px inset #666;
+}
+
+/* Cursor trail, hitmarkers and emoji rain */
+#emoji-rain { position: fixed; inset: 0; z-index: 9997; pointer-events: none; overflow: hidden; }
+.drop { position: absolute; top: -60px; font-size: 28px; animation: fall linear forwards; opacity: 0.85; }
+@keyframes fall { to { transform: translateY(calc(100vh + 120px)) rotate(540deg); } }
+
+.trail { position: fixed; z-index: 9999; pointer-events: none; font-size: 18px; translate: -50% -50%; animation: trail 0.8s ease-out forwards; }
+@keyframes trail { to { opacity: 0; transform: translateY(-30px) scale(0.4) rotate(90deg); } }
+
+.hitmarker { position: fixed; z-index: 9999; pointer-events: none; width: 34px; height: 34px; translate: -50% -50%; animation: hit 0.35s ease-out forwards; }
+.hitmarker::before, .hitmarker::after { content: ""; position: absolute; left: 50%; top: 0; width: 3px; height: 100%; background: #000; clip-path: polygon(0 0, 100% 0, 100% 38%, 0 38%, 0 62%, 100% 62%, 100% 100%, 0 100%); }
+.hitmarker::before { transform: translateX(-50%) rotate(45deg); }
+.hitmarker::after { transform: translateX(-50%) rotate(-45deg); }
+@keyframes hit { from { transform: scale(1.4); } to { opacity: 0; transform: scale(0.9); } }
+
+.hit-text { position: fixed; z-index: 9999; pointer-events: none; font-family: var(--font-head); font-size: 1.3rem; color: var(--neon); -webkit-text-stroke: 1px #000; translate: -50% -50%; animation: hit-text 0.8s ease-out forwards; }
+@keyframes hit-text { to { opacity: 0; transform: translateY(-40px); } }
+
+@media (max-width: 860px) {
+  .sticker-a { left: 0; top: -36px; width: 76px; height: 76px; font-size: 0.8rem; }
+  .hero-art { rotate: 1deg; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #emoji-rain { display: none; }
+}

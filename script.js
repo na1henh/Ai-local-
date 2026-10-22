@@ -71,7 +71,77 @@ document.getElementById("aura-btn").addEventListener("click", () => {
   auraTotal.classList.remove("aura-pop");
   void auraTotal.offsetWidth;
   auraTotal.classList.add("aura-pop");
+  if (delta < 0) vineBoom();
 });
+
+// Brainrot effects
+const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const brainrot = ["💀", "🗿", "🔥", "🤫", "🧏", "😭", "💯", "🍅", "🦈", "👟", "🤖"];
+const pick = (list) => list[Math.floor(Math.random() * list.length)];
+
+document.getElementById("visitor").textContent = String(Math.floor(Math.random() * 999999)).padStart(6, "0");
+
+// Vine boom, synthesized so there is no audio file to ship
+let audio;
+function vineBoom() {
+  try {
+    audio = audio || new (window.AudioContext || window.webkitAudioContext)();
+    const t = audio.currentTime;
+    const osc = audio.createOscillator();
+    const gain = audio.createGain();
+    osc.type = "sine";
+    osc.frequency.setValueAtTime(140, t);
+    osc.frequency.exponentialRampToValueAtTime(38, t + 0.6);
+    gain.gain.setValueAtTime(0.9, t);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.9);
+    osc.connect(gain).connect(audio.destination);
+    osc.start(t);
+    osc.stop(t + 0.9);
+  } catch (e) { /* no audio, no boom */ }
+}
+
+function spawn(cls, x, y, text) {
+  const el = document.createElement("div");
+  el.className = cls;
+  el.style.left = x + "px";
+  el.style.top = y + "px";
+  if (text) el.textContent = text;
+  el.addEventListener("animationend", () => el.remove());
+  document.body.appendChild(el);
+}
+
+// Hitmarker on every click
+document.addEventListener("click", (e) => {
+  spawn("hitmarker", e.clientX, e.clientY);
+  if (Math.random() < 0.35) spawn("hit-text", e.clientX, e.clientY - 24, pick(["+67", "W", "MOGGED", "+AURA", "SIGMA"]));
+});
+
+// Clicking the bomb sets it off
+document.querySelector(".bomb-card").addEventListener("click", vineBoom);
+
+if (!calm) {
+  // Emoji trail behind the cursor
+  let lastTrail = 0;
+  document.addEventListener("pointermove", (e) => {
+    if (e.pointerType !== "mouse" || e.timeStamp - lastTrail < 60) return;
+    lastTrail = e.timeStamp;
+    spawn("trail", e.clientX, e.clientY, pick(brainrot));
+  });
+
+  // Emoji rain
+  const rain = document.getElementById("emoji-rain");
+  setInterval(() => {
+    if (document.hidden || rain.childElementCount > 12) return;
+    const drop = document.createElement("span");
+    drop.className = "drop";
+    drop.textContent = pick(brainrot);
+    drop.style.left = Math.random() * 100 + "vw";
+    drop.style.animationDuration = 5 + Math.random() * 5 + "s";
+    drop.style.fontSize = 20 + Math.random() * 26 + "px";
+    drop.addEventListener("animationend", () => drop.remove());
+    rain.appendChild(drop);
+  }, 900);
+}
 
 // Highlight the nav link for the section on screen
 const links = [...nav.querySelectorAll('a[href^="#"]:not(.btn)')];
